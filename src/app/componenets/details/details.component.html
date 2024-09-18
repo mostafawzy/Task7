@@ -1,0 +1,49 @@
+<div class="container my-5">
+    <div class="row">
+      <!-- Image Section -->
+      <div class="col-md-6">
+        <img [src]="item.images?.[0]" class="img-fluid" alt="{{ item.title }}">
+      </div>
+  
+      <!-- Product Details Section -->
+      <div class="col-md-6">
+        <h1>{{ item.title }}</h1>
+        <p class="text-muted">{{ item.category | titlecase }}</p>
+        <p class="lead">{{ item.description }}</p>
+  
+        <h3 class="mt-4">Price: {{ item.price | currency }}</h3>
+        <p>Discount: {{ item.discountPercentage }}%</p>
+        <p>Rating: {{ item.rating }} / 5</p>
+        <p>Stock: {{ item.stock }} items available</p>
+  
+        <h4 class="mt-4">Tags</h4>
+        <ul>
+          <li *ngFor="let tag of item.tags">{{ tag }}</li>
+        </ul>
+  
+        <h4 class="mt-4">Warranty</h4>
+        <p>{{ item.warrantyInformation }}</p>
+  
+        <h4 class="mt-4">Shipping Info</h4>
+        <p>{{ item.shippingInformation }}</p>
+  
+        <a href="#" class="btn btn-primary mt-4">Buy Now</a>
+      </div>
+    </div>
+  
+    <!-- Reviews Section -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h3>Customer Reviews</h3>
+        <div *ngFor="let review of item.reviews" class="mb-3">
+          <div class="review">
+            <h5>{{ review.reviewerName }}</h5>
+            <p>Rating: {{ review.rating }} / 5</p>
+            <p>{{ review.comment }}</p>
+            <small class="text-muted">Reviewed on {{ review.date | date }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

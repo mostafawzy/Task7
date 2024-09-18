@@ -1,0 +1,28 @@
+.container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  img {
+    border-radius: 8px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  
+  .review {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+  }
+  
+  .review h5 {
+    font-size: 16px;
+  }
+  
+  .review p {
+    margin-bottom: 5px;
+  }
+  
